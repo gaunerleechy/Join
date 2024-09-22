@@ -1,0 +1,365 @@
+.successfull-message {
+    height: 48px;
+    width: 300px;
+    background-color: #2A3647;
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    z-index: 99;
+    border-radius: 10px;
+    color: white;
+    transform: translateX(0);
+    animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.successfull-message.slide-in {
+    animation: slideOut 0.5s forwards ease-in-out;
+}
+
+.successfull-message.slide-out {
+    animation: slideOut 0.5s backwards ease-in-out;
+}
+
+.redtext {
+    color: red;
+    font-size: 12px;
+}
+
+.wrong {
+    border: red;
+}
+
+/***Mobile Edit Mmenu*****************************************************/
+
+.mobile-edit-menu {
+    width: 120px;
+    height: 95px;
+    background-color: white;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    right: 10px;
+    bottom: 100px;
+    padding: 16px;
+    gap: 16px;
+    filter: drop-shadow(4px 0 6px rgba(0, 0, 0, 0.3));
+    border-radius: 10px 10px 0 10px;    
+    animation: slideIn 0.5s forwards ease-in-out;
+    cursor: pointer;
+    z-index: 13;
+}
+
+.mobile-edit-menu.slide-out {
+    animation: slideOut 0.5s backwards ease-in-out;
+}
+
+.mobile-link {
+    color: black;
+}
+
+.edit::before {
+    content: url(../assets/icons/edit.svg);
+    margin-right: 10px;
+}
+
+.delete::before {
+    content: url(../assets/icons/delete.svg);
+    margin-right: 10px;
+}
+
+/***Mobile***************************************/
+
+@media (max-width: 1230px) {
+
+
+    .contacts-motto  {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .seperator {
+        display: none;
+    }
+
+    .seperator-mobile {
+        display: block;
+        height: 3px;
+    }
+
+    .initials--open-contact {
+        height: 80px;
+        font-size: 27px;
+        font-weight: 400;
+    }
+
+    .open-contact-name-and-icons{
+        gap: 5px;
+
+        & p{
+            font-size: 36px;
+            font-weight: 700;            
+        }
+    }
+
+}
+
+@media (max-width: 1060px) {
+    .contacts-register {
+        width: 300px;
+        min-width: 300px;
+        padding: 0 10px 0 10px;
+    }
+
+    .mid-container {
+        padding: 10px;
+    }
+
+    .left-container,.right-container {
+        width: unset;
+    }
+
+    .right-container {
+        padding: 0 10px;
+    }
+
+    .button-box {
+        & .button-filled-large {
+            padding: 5px;
+        }
+        & button {
+            font-size: 16px;
+        }      
+    }
+}
+
+@media (max-width: 825px) {
+
+    .maincontent {
+        position: relative;
+    }
+
+    .contacts-register {
+        width: 100vw;
+        height: calc(100vh - 80px); 
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding-bottom: 90px;
+        min-width: unset;
+    }
+
+    .register-button-container,.seperator,.icons {
+        display: none;
+    }
+
+    .register-letter {
+        padding: 16px 0 16px 5%;
+    }
+
+    .contact {
+        & .initials {
+            height: 42px;
+        }
+    }
+
+    .open-contact-container {
+        margin-top: 80px;
+        width: 100vw;
+        height: calc(100vh - 100px);               
+    }
+
+
+
+    .mobile-button-container {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .back-arrow, .seperator-mobile {
+        display: unset;
+    }
+
+    .contacts-motto {
+        gap: 0;
+        margin-top: 5%;
+    }
+
+    .motto-label {
+        font-size: 47px;
+    }
+
+    .motto-subtext {
+        font-size: 20px;
+    }
+
+    .initials--open-contact {
+        height: 80px;
+        font-size: 27px;
+        border: 3px solid white;
+    }
+
+    .overlaycontainer {
+        background-color: rgba(0, 0, 0, 0.32);
+        z-index: 99;
+    }
+  
+    .overlay {     
+        flex-direction: column;
+        z-index: 15;
+        animation: slideInMobile 0.5s forwards ease-in-out;
+        height: auto;
+        position: relative;
+    }
+
+    .overlay.slide-out {
+        animation: slideOutMobile 0.5s forwards ease-in-out;
+    }
+
+    .left-container {
+        height: 300px;
+        width: 310px;
+        flex-direction: column;
+        align-items: start;
+        padding-left: 20px;
+        border-radius: unset;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+
+        & .logo {
+            display: none;
+        }
+    }
+
+    .close-icon:hover {
+        background-color: unset;
+    }
+
+    .mid-container {
+        position: absolute;
+        top: 248px;
+        height: unset;
+        z-index: 15;
+    }
+
+    .right-container {
+        height: 300px;
+        padding: 65px 0 30px 0;
+
+        & .input-button-box {
+            gap: 14px;
+        }
+
+        & input {
+            width: 280px;
+            padding: 6px 8px;
+        }
+
+        & .button-box {
+            height: unset;
+            justify-content: center;
+            margin: 0 0 10px 0;
+
+            & button {
+                font-size: 21px;
+                font-weight: 700;
+            }
+
+            & #Cancel {
+                display:none;
+            }  
+        }
+    }
+
+    .close-icon {
+        filter: brightness(11);
+    }
+
+    input {
+        height: auto;
+    }
+
+    .button-box {
+        height: 30px;
+    }
+
+    .create-button {
+        font-size: 2.8vw;
+    }
+
+    .cancel-button {
+        font-size: 2.8vw;
+    }
+
+    .successfull-message {
+        left: 16%;
+        top: 78%;
+        transform: translatey(0);
+        animation: slideInMobile 0.5s forwards ease-in-out;
+    }
+    
+    .successfull-message.slide-out {
+        animation: slideOutMobile 0.5s backwards ease-in-out;
+    }
+}
+
+@media (max-width: 600px) {
+
+    input {
+        font-size: 20px
+    }
+}
+
+/***Animations*****************************************************/
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes slideInMobile {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutMobile {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}

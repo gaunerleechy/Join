@@ -1,0 +1,391 @@
+.maincontent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Figtree';
+}
+
+.seperator {
+    height: 50px;
+    width: 3px;
+    background-color: #29ABE2;
+}
+
+.seperator-overlay {
+    height: 3px;
+    width: 82px;
+    background-color: #29ABE2;
+    margin-top: 10px;
+}
+
+.seperator-mobile {
+    height: 1px;
+    width: 82px;
+    background-color: #29ABE2;
+    margin-top: 10px;
+    display: none;
+}
+
+.icons {
+    gap: 16px;
+
+    & a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.icons a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.icons a::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    background-color: currentColor;
+    mask-size: contain;
+}
+
+.icons .edit::before {
+    mask: url('../assets/icons/edit.svg') no-repeat center;
+}
+
+.icons .delete::before {
+    mask: url('../assets/icons/delete.svg') no-repeat center;
+}
+
+.icons a:hover {
+    color: #29ABE2;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.person-svg {
+    height: 70%;
+    filter: brightness(7);
+}
+
+.close-icon:hover {
+    background-color: #D1D1D1;
+    cursor: pointer;
+}
+
+input {
+    width: 80%;
+    cursor: pointer;
+
+    &:focus {
+        border: #29ABE2 solid 1px;
+    }
+}
+
+.register-button-container {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    padding: 25px 3% 25px 2%;
+    z-index: 10;
+}
+
+.register-add-button {
+    height: 50px;
+    width: 100%;
+    font-size: 21px;
+    gap: 20px;
+    z-index: 3;
+    font-weight: 700;
+}
+
+.register-add-button::after {
+    content: url(../assets/icons/person_add.svg);
+}
+
+.relative-button-icon-mobile {
+    height: 40px;
+    width: auto;
+}
+
+.mobile-button-container {
+    height: 70px;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    background-color: #2A3647;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100px;
+    right: 16px;
+    z-index: 13;
+    display: none;
+}
+
+.mobile-button-container:hover {
+    background-color: #29ABE2;
+}
+
+.back-arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 106px;
+    right: 26px;
+    display: none;
+}
+
+.cancel-button {
+    height: 100%;
+    padding: 5px;
+}
+
+.create-button {
+    height: 100%;
+    padding: 5px;
+    white-space: nowrap;
+}
+
+.create-button::after {
+    padding-top: 5px;
+    content: url(../assets/icons/check.svg);
+}
+
+.initials {
+    height: 42px;
+    aspect-ratio: 1/1;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 50%;
+}
+
+.initials--open-contact {
+    height: 120px;
+    font-size: 47px;
+    font-weight: 500;
+}
+
+.initials.active-contact {
+    border: 3px solid white;
+}
+
+.contacts-register {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 97px);
+    width: 450px;
+    flex-direction: column;
+    background-color: white;
+    overflow: auto;
+    padding: 0 20px 0 20px;  
+    z-index: 10;  
+}
+
+.register-letter {
+    width: 95%;
+    justify-content: start;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #A8A8A8;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 400;   
+}
+
+.contact {
+    height: auto;
+    width: 95%;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    justify-content: start;
+    padding: 10px;
+    gap: 5%;
+    margin-bottom: 2%;
+    transition: background-color 0.3s ease;
+}
+
+.contact a {
+    font-size: 16px;
+}
+
+.contact:hover {
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+.contact.active-contact {
+    background-color: #2A3647;
+    color: white;
+}
+
+.contact.active-contact a {
+    color: lightblue;
+}
+
+.open-contact-container {
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 3%;
+    background-color: #F6F7F8;
+    z-index: 9;
+    
+    & .contactcardinfo {
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+.contacts-motto {
+    gap: 15px;
+    margin: 100px 0 50px 0
+}
+
+.motto-label {
+    font-size: 61px;
+    font-weight: 700;
+}
+
+.motto-subtext {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.open-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slide-in {
+    animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.open-contact-headline {
+    justify-content: start;
+    gap: 3%;
+}
+
+.open-contact-name-and-icons {
+    flex-direction: column;
+    align-items: start;
+
+    & p {
+        font-size: 47px;
+        font-weight: 500;
+    }
+}
+
+.phone-and-e-mail-container p{
+    font-weight:700 ;
+    padding: 10px 0 10px 0;
+}
+
+.overlaycontainer {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    height: 594px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 15;
+    animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.overlay.slide-out {
+    animation: slideOut 0.5s forwards ease-in-out;
+}
+
+.overlay.fade-out {
+    animation: fadeOut 0.3s forwards ease-in-out;
+}
+
+.left-container {
+    height: 100%;
+    width: 453px;
+    max-width: 453px;
+    color: white;
+    background-color: #2A3647;
+    flex-direction: column;
+    align-items: start;
+    padding: 0 3%;
+
+    & .logo {
+        height: 67px;
+        width: 54px;
+    }
+}
+
+.mid-container {
+    height: 100%;
+    padding: 40px;   
+}
+
+.right-container {
+    height: 100%;
+    width: 422px;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+
+    & .close-icon {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        height: unset;
+        width: unset;
+        aspect-ratio: unset;
+        border-radius: unset;
+        margin-left: unset;
+    }
+}
+
+.input-button-box {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+
+    & input {
+        cursor: unset;
+    }
+}
+
+.button-box {
+    height: 40px;
+    width: 80%;
+    gap: 10px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    
+    & button {
+        font-size: 21px;
+        font-weight: 400;
+    }
+
+    & button:disabled:hover {
+        cursor: unset;
+        background-color: #2A3647;;
+    }
+
+    & .button-filled-large {
+        padding: 5px 20px;
+        width: auto;
+    }
+}

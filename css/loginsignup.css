@@ -1,0 +1,390 @@
+.login-page-main-container {
+    height: 100dvh;
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    z-index: 4;
+}
+
+.logo {
+    animation: zoom 1s;
+    height: 122px;
+    width: 101px;
+    z-index: 2;
+}
+
+.logomobile{
+    background-color: #2a3547; 
+    height: 122px;
+    width: 101px;
+    opacity: 0;
+}
+
+.log-in-headline {
+    position: relative;
+    width: 100dvw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%;
+}
+
+.log-in-headline a {
+    color: black;
+    text-decoration: none;
+}
+
+.log-in-head-links {
+    gap: 30px;
+}
+
+.log-in-head-links button {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.log-in-head-links p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.login-container {
+    height: 75%;
+    width: 652px;
+    background-color: white;
+    border-radius: 25px;
+    flex-direction: column;
+    gap: 32px;
+    padding: 18px 0;
+    margin-top: 50px;
+    margin-bottom: 130px;
+    box-shadow: 2px 0 6px 0 rgb(0, 0, 0, 0.2);
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.seperator {
+    height: 3px;
+    width: 170px;
+    background-color: #29ABE2;
+    margin: 0;
+    margin-top: -21px;
+}
+
+.checkbox-container {
+    position: relative;
+    height: 24px;
+    width: 422px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    margin-left: 30px;
+}
+
+.checkbox-container input, .confirmbox input{
+    position: absolute;
+    opacity: 0;
+    scale: 1.2;
+    left: 6px;
+    z-index: 12;
+}
+
+.checkbox-container input:hover ~ .checkmark, .confirmbox input:hover ~ .checkmark {
+    scale: 1.1;
+}
+
+.checkbox-container input:checked ~ .checkmark, .confirmbox input:checked ~ .checkmark {
+    content: url(../assets/icons/checkedcheckbox.svg);
+}
+
+.checkmark {
+    content: url(../assets/icons/emptycheckbox.svg);
+}
+
+.confirmbox {
+    position: relative;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+
+.button-container {
+    gap: 30px;
+}
+
+.button-filled-small:disabled:hover{
+    background-color: #2a3547;
+}
+
+.button-container button {
+    font-size: 21px;
+    font-weight: 700;
+    height: auto;
+    width: auto;
+    padding: 15px 24px;
+}
+
+.legal-links-container {
+    height: 10%;
+    width: 100%;
+    font-size: 16px;
+    gap: 50px;
+}
+
+.legal-links {
+    color: #B6B6B7;
+    text-decoration: none;
+}
+
+.legal-links:hover {
+    font-weight: bold;
+    color: #29ABE2;
+}
+
+.wronglogin input {
+    border-color: red !important;
+}
+
+.wronglogin{
+    border-color: red !important;
+}
+
+.passwortcontainer{
+    font-size: 12px;
+    position: relative;
+}
+
+.redtext {
+    color: red;
+}
+
+.headtext-and-arrow-container {
+    width: 100%;
+    padding-right: 16%;
+}
+
+.arrow {
+    margin-right: 16%;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.privacy-link {
+    color: #29ABE2;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.d-none {
+    display: none;
+}
+
+.eye-container{
+    cursor: text;
+    font-size: 20px;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    padding: 12px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.eye[type=password]{
+    background-image: url(../assets/icons/visibility_off.svg);
+}
+
+.eye[type=text]{
+    background-image: url(../assets/icons/visibility.svg);
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B6B6B7;
+    z-index: 99;
+}
+
+.signupmessage {
+    border: solid 1px transparent;
+    border-radius: 15px;
+    padding: 25px;
+    background: #2a3547;
+    font-size: 20px;
+    color: white; 
+    animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) ;
+}
+
+@keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+/****************************MOBILE**********************************/
+
+@media(max-width: 825px) {
+
+    .login-container {
+        margin: 5% 5% ;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+    }
+}
+
+@media(max-width: 700px) {
+    .login-page-main-container{
+        animation: changecolor 1s;
+    }
+
+    .sign-up-container {
+        width: 95%;
+    }
+
+    .login-container {
+        width: 95%;
+    }
+
+    input {
+        background-position-x: 95%;
+    }
+
+    .seperator {
+        width: 100px;
+    }
+
+    .logo {
+        animation: none;
+    }
+
+    .logomobile {
+        animation: zoommobile 1s;
+    }
+
+    @keyframes zoommobile { 
+        0% {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0;        
+            left: 0;  
+            scale: 2;  
+            padding: 3% 5%;
+            height: 100dvh;
+            width: 100dvw;
+            z-index: 99;  
+            opacity: 1;
+            background-color: none;
+        }
+        30% {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top:0;        
+            left: 0;  
+            scale: 2;
+            padding: 3% 5%;
+            height: 100dvh;
+            width: 100dvw;
+            opacity:  1;
+        }
+        100% {
+            height: 122px; 
+            width: 101px; 
+            top: 3%; left: 
+            5%;
+            padding-top: 3%;
+            opacity: 0.3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            z-index: 10;}     
+    }
+}
+
+@keyframes zoom { 
+    0% {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top:0;        
+        left: 0;  
+        scale: 2;  
+        padding: 3% 5%;
+        height: 100dvh;
+        width: 100dvw;
+        z-index: 99;  
+        opacity: 1;
+        background-color: white;
+    }
+    30% {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top:0;        
+        left: 0;  
+        scale: 2;
+        padding: 3% 5%;
+        height: 100dvh;
+        width: 100dvw;
+        opacity:  1;
+        background-color: white;
+    }
+    100% {
+        height: 122px; 
+        width: 101px; 
+        top: 3%; left: 
+        5%;
+        padding-top: 3%;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 10;}     
+}
+
+@keyframes changecolor {
+    0% { background-color: #2a3547;}
+    50% { background-color: #2a3547; z-index: 20;}
+    100% {background-color: white;}
+}

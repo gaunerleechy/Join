@@ -1,0 +1,357 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 2%;
+}
+
+.title {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.title b {
+    font-size: 61px;
+    font-weight: 700;
+}
+
+.title span {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.blueborder {
+    border: 1px solid #29ABE2;
+    height: 50px;
+}
+
+.gretting {
+    font-size: 47px;
+    font-weight: 600;
+}
+
+.user {
+    font-size: 64px;
+    font-weight: 700;
+    color: #29ABE2;
+}
+
+.overwiev-container-box {
+    gap: 60px;
+}
+
+.number {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.overwiev-box {
+    flex-direction: column;
+    width: 560px;
+    height: 562px;
+    gap: 25px;
+}
+
+.overwiev-box a {
+    color: black;
+}
+
+.mediumbox img {
+    height: 69px;
+    width: 69px;
+}
+
+.big {
+    width: 100%;
+    height: 100%;
+    gap: 25px;
+}
+
+.medium {
+    width: 50%;
+    height: inherit;
+    gap: 10px;
+}
+
+.small p,
+.medium p {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.small {
+    width: 33%;
+    height: inherit;
+}
+
+.smallbox {
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.mediumbox {
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    padding: 25px 30px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid rgb(238, 239, 240);
+}
+
+.column {
+    flex-direction: column;
+}
+
+.greyborder {
+    border: 1px solid #D1D1D1;
+    height: 70%;
+}
+
+.urgentdescription b {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.urgentdescription p {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 8px;
+}
+
+.box:hover {
+    color: #D1D1D1;
+    background-color: #2A3647;
+    -webkit-box-shadow: 0px 10px 13px -4px rgba(143, 136, 143, 1);
+    -moz-box-shadow: 0px 10px 13px -4px rgba(143, 136, 143, 1);
+    box-shadow: 0px 10px 13px -4px rgba(143, 136, 143, 1);
+    border-color: #2A3647;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.checkcircle {
+    background-image: url(../assets/icons/checkcircle.svg);
+    height: 69px;
+    width: 69px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.box:hover .checkcircle {
+    background-image: url(../assets/icons/whitecheckcircle.svg);
+}
+
+.circlepen {
+    background-image: url(../assets/icons/circlepen.svg);
+    height: 69px;
+    width: 69px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.box:hover .circlepen {
+    background-image: url(../assets/icons/whitepencircle.svg);
+}
+
+.showinmobile {
+    display: none;
+}
+
+@media (max-width:1150px) {
+    @keyframes slide-out-bck-center {
+        0% {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            bottom: 0px;
+            right: 0;
+            opacity: 1;
+            z-index: 99;
+            background-color: white;
+        }
+
+        100% {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            bottom: 0px;
+            right: 0;
+            opacity: 1;
+            z-index: 99;
+            background-color: white;
+            opacity: 0;
+        }
+    }
+
+    .mobiled-none{
+        display: none;
+    }
+
+    .greeting_user {
+        animation: slide-out-bck-center 3s both;
+    }
+}
+
+@media (max-width:840px) {
+    .title {
+        gap: 15px;
+    }
+
+    .maincontent {
+        align-items: flex-start;
+        margin-top: 80px;
+        padding-top: 20px;
+        height: auto !important;
+    }
+
+    @keyframes slide-out-bck-center {
+        0% {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            bottom: 80px;
+            right: 0;
+            opacity: 1;
+            z-index: 99;
+            background-color: white;
+        }
+
+        100% {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            bottom: 80px;
+            right: 0;
+            opacity: 1;
+            z-index: 99;
+            background-color: white;
+            opacity: 0;
+        }
+    }
+}
+
+@media (max-width:585px) {
+    .showdesktop {
+        display: none;
+    }
+
+    .showinmobile {
+        margin-top: 5px;
+        display: block;
+        height: 0;
+        width: 90px;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .title b,
+    .number {
+        font-size: 47px;
+    }
+
+    .title span {
+        font-size: 20px;
+    }
+
+    .mobilefont-size {
+        font-size: 14px !important;
+    }
+
+    .circlepen,
+    .checkcircle,
+    .big img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .overwiev-box {
+        height: 384px;
+        width: 396px;
+        gap: 10px;
+    }
+
+    .box {
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .big,
+    .medium {
+        height: auto;
+    }
+
+    .urgentdescription b {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:410px) {
+    .content {
+        gap: 20px;
+    }
+
+    .overwiev-box {
+        width: 310px;
+        gap: 5px;
+        height: 300px;
+    }
+
+    .mediumbox {
+        gap: 10px;
+    }
+
+    .smallbox {
+        gap: 5px;
+    }
+
+    .number, .gretting {
+        font-size: 37px;
+    }
+
+    .circlepen,
+    .checkcircle,
+    .big img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .user {
+        font-size: 42px;
+    }
+}

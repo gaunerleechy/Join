@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="icon" href="./assets/icons/favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/contactsmobile.css">
+    <script src="./script.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/template.js"></script>
+    <script src="./js/contactshelpfunctions.js"></script>
+</head>
+
+<body onload="init() ,checkIfUserlogin()">
+    <header>
+        <h2 class="showindesktop">Kanban Project Managment Tool</h2>
+        <img src="./assets/icons/capa 2.svg" alt="" class="showmobile">
+        <div class="header-icon-container">
+            <a class="showindesktop" href="./help.html"><img src="./assets/icons/help.svg"></a>
+            <div class="account-info" id="showuser" onclick="showUserMenue()"></div>
+        </div>
+        <div class="dropdownmenu d-none" id="usermenue">
+            <a href="./legal.html">Legal Notice</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./index.html">Log out</a>
+        </div>
+    </header>
+    <nav>
+        <div class="logo showindesktop">
+            <img src="./assets/icons/capa 1.svg">
+        </div>
+        <div class="nav-links-container" id="navlinks">
+            <a href="./summary.html"><i class="summaryicon"></i> Summary</a>
+            <a href="./add-task.html"><i class="taskicon"></i> Add Task</a>
+            <a href="./board.html"><i class="boardicon"></i> Board</a>
+            <a class="aktivesheet" href="./contacts.html"><i class="contactsicon"></i> Contacts</a>
+        </div>
+
+        <div class="legal-links showindesktop">
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./legal.html">Legal Notice</a>
+        </div>
+    </nav>
+
+    <div class="desktop" style="overflow-x: hidden;position: relative;">
+        <div class="maincontent">         
+            <div class="contacts-register" id="contacts-register"></div>
+            <div class="open-contact-container" onclick="closeMobileEditMenu()">
+                <img class="back-arrow" alt="backbutton" src="./assets/icons/arrowleft.svg" onclick="goBack()">
+                <div class="contacts-motto center">
+                    <p class="motto-label">Contacts</p>
+                    <div class="seperator"></div>
+                    <p class="motto-subtext">Better with a team</p>
+                    <div class="seperator-mobile"></div>
+                </div>
+                <div class="open-contact" id="open-contact"></div>
+            </div>
+
+        </div>
+        <div class="overlaycontainer center d-none" id="overlaycontainer">
+            <div class="successfull-message center d-none hide" id="successfull-message">Contact successfully created!
+            </div>
+            <div class="overlay center hide d-none" id="overlay"></div>            
+        </div>   
+        <div class="mobile-button-container center" id="mobile-button-container" onclick="showMobileEditMenu()">
+            <img class="relative-button-icon-mobile" id="relative-icon" src="./assets/icons/person_add.svg"></img>
+        </div>
+        <div class="mobile-edit-menu center d-none" id="mobile-edit-menu"></div>
+    </div>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+{
+  "contacts": [
+    {
+      "color": "#6E52FF",
+      "mail": "schulz@gmail.com",
+      "name": "Anja Schulz",
+      "phonenumber": "174987674765"
+    },
+    {
+      "color": "#9327FF",
+      "mail": "anton@gmx.com",
+      "name": "Anton Mayer",
+      "phonenumber": "173867654653"
+    },
+    {
+      "color": "#FC71FF",
+      "mail": "benedikt@googlemail.com",
+      "name": "Benedikt Ziegler",
+      "phonenumber": "174987674765"
+    },
+    {
+      "color": "#FFBB2B",
+      "mail": "davidberg@hotmail.de",
+      "name": "David Eisenberg",
+      "phonenumber": "176983474765"
+    },
+    {
+      "color": "#462F8A",
+      "mail": "emmalnuelma@live.com",
+      "name": "Emmanuel Mauer",
+      "phonenumber": "174987674765"
+    },
+    {
+      "color": "#1FD7C1",
+      "mail": "eva@gmx.com",
+      "name": "Eva Fischer",
+      "phonenumber": "1749876723765"
+    },
+    {
+      "color": "#95347E",
+      "mail": "",
+      "name": "Guest",
+      "phonenumber": ""
+    },
+    {
+      "color": "#FF4646",
+      "mail": "bauer@gmail.com",
+      "name": "Marcel Bauer",
+      "phonenumber": "172932674765"
+    },
+    {
+      "color": "#9437FF",
+      "mail": "wolfi@gmx.com",
+      "name": "Tatjana Wolf",
+      "phonenumber": " 176127674765"
+    },
+    {
+      "color": "#6CDA89",
+      "mail": "",
+      "name": "Toni Kleinfeld",
+      "phonenumber": ""
+    }
+  ],
+  "tasks": [
+    {
+      "Assigned To": [
+        "Emmanuel Mauer",
+        "Marcel Bauer",
+        "Anton Mayer",
+        "Benedikt Ziegler",
+        "David Eisenberg"
+      ],
+      "category": "User story",
+      "description": "Build start page with recipe recommendation.",
+      "duedate": "2024-10-25",
+      "prio": "Medium",
+      "progress": "in progress",
+      "subtask": [
+        {
+          "state": true,
+          "title": "Implement Recipe Recommendation"
+        },
+        {
+          "state": false,
+          "title": "Start Page Layout"
+        }
+      ],
+      "title": "Kochwelt Page & Recipe Recommender"
+    },
+    {
+      "Assigned To": [
+        "Eva Fischer",
+        "Benedikt Ziegler",
+        "Emmanuel Mauer"
+      ],
+      "category": "Technical Task",
+      "description": "Define CSS naming conventions and structure.",
+      "duedate": "2024-09-30",
+      "prio": "Urgent",
+      "progress": "Await feedback",
+      "subtask": [
+        {
+          "state": true,
+          "title": "Establish CSS Methodology"
+        },
+        {
+          "state": true,
+          "title": "Setup Base Styles"
+        }
+      ],
+      "title": "CSS Architecture Planning"
+    },
+    {
+      "Assigned To": [
+        "David Eisenberg",
+        "Benedikt Ziegler",
+        "Anja Schulz"
+      ],
+      "category": "Technical Task",
+      "description": "Create reuseable HTML base templates",
+      "duedate": "2024-10-15",
+      "prio": "Low",
+      "progress": "Await feedback",
+      "title": "HTML Base Template Creation"
+    },
+    {
+      "Assigned To": [
+        "Eva Fischer",
+        "Anja Schulz",
+        "Tatjana Wolf"
+      ],
+      "category": "User story",
+      "description": "Implement daily recipe and portion calculator",
+      "duedate": "2024-11-12",
+      "prio": "Medium",
+      "progress": "to do",
+      "title": "Daily Kochwelt Recipe"
+    },
+    {
+      "Assigned To": [
+        "Tatjana Wolf",
+        "Anja Schulz",
+        "Benedikt Ziegler",
+        "Guest",
+        "Eva Fischer",
+        "Marcel Bauer",
+        "David Eisenberg",
+        "Emmanuel Mauer",
+        "Anton Mayer"
+      ],
+      "category": "User Story",
+      "description": "Let's finish this projekt until next week!",
+      "duedate": "2024-09-20",
+      "prio": "Urgent",
+      "progress": "Done",
+      "subtask": [
+        {
+          "state": true,
+          "title": "Contacts"
+        },
+        {
+          "state": true,
+          "title": "Add Task"
+        },
+        {
+          "state": true,
+          "title": "Board.js"
+        }
+      ],
+      "title": "Bring Join on Stage"
+    }
+  ],
+  "user": [
+    {
+      "account": "Boban  Jakovljevic",
+      "code": 4321,
+      "mail": "boban@hotmail.de"
+    },
+    {
+      "account": "Patric Klimbacher",
+      "code": 3412,
+      "mail": "Patric@gmail.com"
+    },
+    {
+      "account": "Toni Kleinfeld",
+      "code": 1234,
+      "mail": "toni@aol.com"
+    },
+    {
+      "account": "Toni Gebhardt",
+      "code": "12345",
+      "mail": "poring@hotmail.de"
+    }
+  ]
+}

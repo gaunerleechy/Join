@@ -1,0 +1,18 @@
+/*
+*   This function is used to greed someone on the commant line
+*
+*   @param {string} name - This ist the ... of ..
+*/
+
+function greet(name){
+    console.log('hallo' +  name ); 
+}
+
+
+terminal :
+
+npm install -g jsdoc              (nur beim ersten mal)
+
+jsdoc .                          (punkt für alle   script.js z.b nur für bestimmte Datei)
+(generiert ordner out , die index laden um infos über die angegeben funktionen bekommen)
+(zum bsp: um es zu kopieren um eine Dokumentation mitzugeben als text datei)

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Summary </title>
+    <link rel="icon" href="./assets/icons/favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/summary.css">
+    <script src="./script.js"></script>
+    <script src="./js/summary.js"></script>
+</head>
+
+<body onload="checkIfUserlogin(), init()">
+    <header>
+        <h2 class="showindesktop">Kanban Project Managment Tool</h2>
+        <img src="./assets/icons/capa 2.svg" alt="" class="showmobile">
+        <div class="header-icon-container"  >
+            <a class="showindesktop" href="./help.html"><img src="./assets/icons/help.svg"></a>
+            <div class="account-info" id="showuser" onclick="showUserMenue()"></div>
+        </div>
+        <div class="dropdownmenu d-none" id="usermenue">
+            <a href="./legal.html">Legal Notice</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./index.html" onclick="logOut()">Log out</a>
+        </div>
+    </header>
+    <nav>
+        <div class="logo showindesktop">
+            <img src="./assets/icons/capa 1.svg">
+        </div>
+        <div class="nav-links-container" id="navlinks">
+            <a class="aktivesheet" href="./summary.html"><i class="summaryicon"></i> Summary</a>
+            <a href="./add-task.html"><i class="taskicon"></i> Add Task</a>
+            <a href="./board.html"><i class="boardicon"></i> Board</a>
+            <a href="./contacts.html"><i class="contactsicon"></i> Contacts</a>
+        </div>
+
+        <div class="legal-links showindesktop">
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./legal.html">Legal Notice</a>
+        </div>
+    </nav>
+    <div class="desktop">
+        <div class="maincontent center">
+            <div class="content">
+                <div class="title">
+                    <p><span><b>Join 360</b></span></p>
+                    <div class="blueborder showdesktop"></div>
+                    <span>Key Metrics at a Glance</span>
+                    <div class="blueborder showinmobile"></div>
+                </div>
+                <div class="overwiev-container-box center">
+                    <div class="overwiev-box center">
+                        <div class="center mediumbox ">
+                            <a href="./board.html" class="medium box center">
+                                <div class="circlepen"></div>
+                                <div class="center column"><b id="counttodo" class="number">1</b>
+                                    <p class="mobilefont-size">To-do</p>
+                                </div>
+                            </a>
+                            <a href="./board.html" class="medium box center">
+                                <div class="checkcircle"></div>
+                                <div class="center column">
+                                    <b class="number" id="countdone">1</b>
+                                    <p class="mobilefont-size">Done</p>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="./board.html" class="big box center">
+                            <img src="./assets/icons/urgent.svg" alt="">
+                            <div class="center column">
+                                <b class="number" id="counturgent">1</b>
+                                <p class="mobilefont-size">Urgent</p>
+                            </div>
+                            <div class="greyborder"></div>
+                            <div class="urgentdescription">
+                                <b id="deadline"></b>
+                                <p class="mobilefont-size">Upcoming Deadline</p>
+                            </div>
+                        </a>
+                        <div class="center smallbox">
+                            <a href="./board.html" class="small box center column">
+                                <b class="number" id="countalltask"></b>
+                                <p class="mobilefont-size">Task in Board</p>
+                            </a>
+                            <a href="./board.html" class="small box center column">
+                                <b class="number" id="counttaskinprogress">2</b>
+                                <p class="mobilefont-size">Task in Progress</p>
+                            </a>
+                            <a href="./board.html" class="small box center column">
+                                <b class="number" id="countfeedback">2</b>
+                                <p class="mobilefont-size">Awaiting Feedback</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="greeting_user mobiled-none" id="greeting_user">
+                        <p class="gretting" id="greeting"></p>
+                        <p class="user" id="userlogedin"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

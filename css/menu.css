@@ -1,0 +1,248 @@
+/*---------------Navigation---------------------------*/
+
+nav {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 232px;
+    font-size: 16px;
+    color: #CDCDCD;
+    background-color: #2A3647;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 60px 0;
+    z-index: 5;
+    
+}
+
+nav a {
+    color: #CDCDCD;
+    text-decoration: none;
+}
+
+.logo {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.nav-links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 70%;
+}
+
+.nav-links-container a{
+    width: 232px;
+    padding: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding-left: 60px;
+}
+
+.legal-links {
+    height: 100px;
+    width: 100%;
+    color: #898C90;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.legal-links a{
+    font-size: 14px;
+    padding-left: 60px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.legal-links a:hover{
+    color: #29aae0;
+}
+
+.summaryicon::before{
+    content: url('../assets/icons/summary.svg');
+}
+
+.taskicon::before{
+    content: url('../assets/icons/add\ task.svg');
+}
+.boardicon::before{
+    content: url('../assets/icons/board.svg');
+}
+.contactsicon::before{
+    content: url('../assets/icons/contacts.svg');
+}
+
+.nav-links-container a:hover{
+    background-color: #374961;
+    cursor: pointer;
+}
+
+/*******************header************************/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 232px;
+    border-bottom: 3px solid rgb(228, 230, 232);
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8%;
+    padding-right: 50px;
+    height: 97px;
+    z-index: 10;
+}
+
+.maincontent{
+    margin-top: 97px;
+    margin-left: 232px;
+    background-color: #F6F7F8;
+    overflow-y: auto;
+    height: calc(100vh - 97px);
+    width: calc(100vw - 232px);
+}
+
+.header-icon-container {
+    height: 10vh;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.account-info {
+    border: 3px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #29aae0;
+}
+
+.dropdownmenu{
+    background-color: #2A3647;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    position: absolute;
+    height: 150px;
+    width: auto;
+    top: 97px;
+    right: 30px;
+    border: 0px solid transparent;
+    border-radius: 25px 0 25px 25px;
+    z-index: 99;
+}
+
+.dropdownmenu a{
+    color: #CDCDCD;
+    text-decoration: none;
+}
+
+.account-info:hover {
+    cursor: pointer;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.showmobile{
+    display: none;
+}
+
+.aktivesheet{
+   background-color: #091931; 
+}
+
+@media (max-width:825px) {
+    .showindesktop{
+        display: none;
+    }
+
+    .showmobile{
+        display: block;
+        height: 39px;
+        width: 32px;
+    }
+
+    header{
+        left: 0;
+        right: 0;
+        height: 80px;
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
+        z-index: 99;
+    }
+
+    .header-icon-container {
+        width: auto;
+    }
+
+    nav{
+        top: auto;
+        right: 0;
+        height: 80px;
+        width: 100%;
+        padding: 0;
+        z-index: 99;
+    }
+
+    .maincontent{
+        margin-top: 0;
+        margin-left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav-links-container{
+      flex-direction: row;  
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      padding-bottom: 0;
+    }
+
+    .nav-links-container a{
+        position: relative;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0;
+        width: 80px;
+        height: 76px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .aktivesheet{
+        border-radius: 10px;
+        border: solid 1px #091931; 
+     }
+}

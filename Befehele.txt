@@ -1,0 +1,36 @@
+git add .                    <---1
+git commit -m "...text..."   <---2
+git push                     <---3
+
+
+npm install bootstrap        <---Befehlt Bootstrap instalieren!
+
+
+Entkoppeln git -> git ordner löschen.
+oder ---> del .git    :windows
+     ---> sudo rm -rf .git    :linux       
+
+
+   einrichten: ( Evtl siehe git):
+
+   git init 
+   git add .
+   git commit -m "first commit"
+   git branche -M main
+   git remote add orgin ...Adresse... .git
+   git push -u orgin main
+
+
+-git checkout -b 'hier name ohne '
+Wechsel zu neuer branch.
+
+
+
+   cd ordername       --->wechsel cmd in enprechenden order
+   dir                ---> anzeige der Dateien im ordner windows
+   ls                 ---> linux version
+
+
+
+   // befehlskonsole  
+   //   Im entsprechenden Ordner  : DIR /b     um Dateien aus dem Ordner anzuzeigen und leichter kopieren zu können

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in / Sign up Join</title>
+    <link rel="icon" href="./assets/icons/favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/loginsignup.css">
+    <link rel="stylesheet" href="./css/medialoginsignup.css">
+    <script src="./script.js"></script>
+    <script src="./js/login.js"></script>
+</head>
+
+<body onload="remeberMeCheck()" >
+
+    <div class="login-page-main-container center ">
+
+        <div class="log-in-headline">
+            <div class="logo">
+                <img src="./assets/icons/capa 2.svg">
+                
+            </div>
+            <div class="logomobile">
+                <img src="./assets/icons/capa 1.svg">
+            </div>            
+
+            <div class="log-in-head-links center mobileposition" id="signupbutton">
+                <p>Not a Join User?</p>
+                <button class="button-filled-small" onclick="switchLoginSignupWindow()">Sign up</button>
+            </div>
+        </div>
+
+        <div class="login-container center" id="loginscreen">
+
+            <h1>Log in</h1>
+
+            <div class="seperator"></div>
+
+            <form class="login-form center" id="loginform" onsubmit="event.preventDefault(), checkValidLogIn()"
+                autocomplete="off" >
+
+                <input type="email" class="input-mail" placeholder="Email" required id="email" autocomplete="on">
+                <div class="passwortcontainer">
+                    <input type="password" class="input-password" placeholder="Password" required id="password" onkeyup="addEyeIcons('password')">
+                    <icon class="eye-container" onclick="hideShowPassword('password')" id="passwordicon"></icon>
+                    <br>
+                    <label for="password" class="redtext d-none" id="wronglogintext">Check your email and password. Please try
+                        again.</label>
+                </div>
+                <div class="checkbox-container">
+                    <input class="checkbox" type="checkbox" name="remember" id="remember">
+                    <span class="checkmark"></span>
+                    <label for="remember">Remember me</label>
+                </div>
+            </form>
+
+            <div class="button-container center">
+                <button type="submit" form="loginform" class="button-filled-small log-in-button">Log in</button>
+                <button class="button-empty-large" onclick="guestLogIn()" >Guest Log in</button>
+            </div>
+        </div>
+
+        <div class="login-container center d-none signup" id="signup">
+
+            <div class="headtext-and-arrow-container center">
+                <img class="arrow" src="./assets/icons/arrowleft.svg" onclick="switchLoginSignupWindow()">
+                <h1 class="headline">Sign up</h1>
+            </div>
+
+            <div class="seperator"></div>
+
+            <form class="login-form center" id="signupform" onsubmit="event.preventDefault(), signUp()" onchange="checkSignUp()">
+
+                <div class="passwortcontainer">
+                    <input type="text" class="input-name" placeholder="Name" required id="signupname">
+                    <br>
+                    <label for="signupname" class="redtext d-none" id="signupnamelabel">Please insert a Name.</label>
+                </div>
+                <div class="passwortcontainer">
+                    <input type="email" class="input-mail" placeholder="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required id="signupmail" >
+                    <br>
+                    <label for="signupmail" class="redtext d-none" id="signupmaillabel" >Please insert a Email, example: my@mail.com.</label>
+                </div>
+                <div class="passwortcontainer">
+                    <input type="password" class="input-password" placeholder="Password" required id="setpassword" onkeyup="addEyeIcons('setpassword')">
+                    <icon class="eye-container" onclick="hideShowPassword('setpassword')" id="setpasswordicon"></icon>
+                    <br>
+                    <label for="setpassword" class="redtext d-none" id="setpasswordlabel">Please fill this field.</label>
+                </div>                
+                <div class="passwortcontainer">
+                    <input type="password" class="input-password" placeholder="Confirm Password" required id="confirmpassword" onkeyup="addEyeIcons('confirmpassword'), checkPasswordMatch()">
+                    <icon class="eye-container" onclick="hideShowPassword('confirmpassword')" id="confirmpasswordicon"></icon><br>
+                    <label for="confirmpassword" class="redtext d-none" id="passwordnomatch">Your password don't match. Please try again.</label>
+                </div>                
+
+                <div class="confirmbox">
+                    <input class="checkbox" type="checkbox" name="confirmread" required id="confirmread">
+                    <span class="checkmark"></span>
+                    <label for="confirmread">I confirm the <a href="./privacy.html" class="privacy-link">Privacy policy</a></label>
+                    
+                </div>
+                <label for="confirmread" class="redtext d-none" id="confirmreadlabel">Please confirm.</label>
+            </form>
+
+            <div class="button-container">
+                <button class="button-filled-small" form="signupform" id="submitsignup" disabled="true">Sign up</button>
+            </div>
+        </div>
+
+        <div class="legal-links-container center">
+            <a href="./privacy.html"   class="legal-links">Privacy Policy</a>
+            <a href="./legal.html"  class="legal-links">Legal Notice</a>
+        </div>
+
+    </div>
+
+    <div class="background center d-none" id="signupdone">
+    <div class="signupmessage">You Signed Up successfully</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="icon" href="./assets/icons/favicon.svg">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/addtask.css">
+    <link rel="stylesheet" href="./css/mediaaddtask.css">
+    <link rel="stylesheet" href="./css/mediaboard.css">
+    <script src="./js/board.js"></script>
+    <script src="./js/boardhelpfunctions.js"></script>
+    <script src="./script.js"></script>
+    <script src="./js/addtask.js"></script>
+    <script src="./js/addtaskhelpfunctions.js"></script>
+    <script src="./js/template.js"></script>
+</head>
+
+<body onload="initBoard(), checkIfUserlogin()">
+    <header>
+        <h2 class="showindesktop">Kanban Project Managment Tool</h2>
+        <img src="./assets/icons/capa 2.svg" alt="" class="showmobile">
+        <div class="header-icon-container">
+            <a class="showindesktop" href="./help.html"><img src="./assets/icons/help.svg"></a>
+            <div class="account-info" id="showuser" onclick="showUserMenue()"></div>
+        </div>
+        <div class="dropdownmenu d-none" id="usermenue">
+            <a href="./legal.html">Legal Notice</a>
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./index.html">Log out</a>
+        </div>
+    </header>
+    <nav>
+        <div class="logo showindesktop">
+            <img src="./assets/icons/capa 1.svg">
+        </div>
+        <div class="nav-links-container" id="navlinks">
+            <a href="./summary.html"><i class="summaryicon"></i> Summary</a>
+            <a href="./add-task.html"><i class="taskicon"></i> Add Task</a>
+            <a class="aktivesheet" href="./board.html"><i class="boardicon"></i> Board</a>
+            <a href="./contacts.html"><i class="contactsicon"></i> Contacts</a>
+        </div>
+
+        <div class="legal-links showindesktop">
+            <a href="./privacy.html">Privacy Policy</a>
+            <a href="./legal.html">Legal Notice</a>
+        </div>
+    </nav>
+    <div class="desktop">
+        <div id="MainContent" class="maincontent">
+            <div id="boardMain" class="board-main">
+                <div class="board-headline">
+                    <div class="resp-h1-plus-add-task-button">
+                        <h1>Board</h1>
+                        <a class="plus-add-task-button center" href="./add-task.html"><img
+                                src="./assets/icons/plus-add-task-button.svg" alt=""></a>
+                    </div>
+                    <div class="board-headline-input-button-container mb-16">
+                        <div class="input-search-container">
+                            <input id="searchInput" class="search" type="search" placeholder="Find Task"
+                                oninput="filterTask()">
+                            <!-- <img src="./assets/icons/search.svg"> -->
+                        </div>
+                        <button onclick="openAddTaskDialog('to do')" class="add-task-button">Add Task +</button>
+                    </div>
+                </div>
+                <div id="categoryMainContainer" class="category-main-container">
+                    <!--------------TO DO------------------>
+                    <div class="category-containers">
+                        <div class="to-do-title mb-16">
+                            <h2>To do</h2>
+                            <img onclick="openAddTaskDialog('to do')" class="plus-button"
+                                src="./assets/icons/plus-button.svg" alt="">
+                        </div>
+                        <div id="tableToDo" class="tabelle-card" ondrop="moveTo('to do'), removeHighlight()" ondragover="allowDrop(event), highlight('tableToDo')">
+                            <!--hier werden die karten gerendert-->
+                        </div>
+                    </div>
+                    <!--------------IN PROGRESS-------------->
+                    <div class="category-containers">
+                        <div class="in-progress-title mb-16">
+                            <h2>In progress</h2>
+                            <img onclick="openAddTaskDialog('in progress')" class="plus-button"
+                                src="./assets/icons/plus-button.svg" alt="">
+                        </div>
+                        <div id="tableInProgress" class="tabelle-card" ondrop="moveTo('in progress'), removeHighlight()"
+                            ondragover="allowDrop(event), highlight('tableInProgress')">
+                        </div>
+                            <!--hier werden die karten gerendert-->
+                    </div>
+                    <!-------------AWAIT FEEDBACK------------>
+                    <div class="category-containers">
+                        <div class="await-feedback-title mb-16">
+                            <h2>Await feedback</h2>
+                            <img onclick="openAddTaskDialog('Await feedback')" class="plus-button"
+                                src="./assets/icons/plus-button.svg" alt="">
+                        </div>
+                        <div id="tableAwaitFeedback" class="tabelle-card" ondrop="moveTo('Await feedback'), removeHighlight()" 
+                            ondragover="allowDrop(event), highlight('tableAwaitFeedback')">
+                            <!--hier werden die karten gerendert-->
+                        </div>
+                    </div>
+                    <!-------------------DONE----------------->
+                    <div class="category-containers">
+                        <div class="done-title mb-16">
+                            <h2>Done</h2>
+                            <img src="" alt="">
+                        </div>
+                        <div id="tableDone" class="tabelle-card" ondrop="moveTo('Done'), removeHighlight()" ondragover="allowDrop(event), highlight('tableDone')">
+                            <div class=" card-container"></div>
+                        <div class="no-task-done-container">
+                            <span class="no-task-done-text">no task Done</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- overlay -->
+    <div id="overlay" class="overlay" style="display: none;" onclick="closeTaskOverlay()">
+        <!---------inhalt von overlay-->
+    </div>
+    <!-- add task overlay -->
+    <div id="addTaskOverlay" class="add-task-overlay" style="display: none;" onclick="closeAddTaskDialog()">
+
+    </div>
+</body>
+
+</html>
